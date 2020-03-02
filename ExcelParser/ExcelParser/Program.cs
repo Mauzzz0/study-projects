@@ -1,27 +1,19 @@
-﻿using System;
+﻿//using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using eXCEL = Microsoft.Office.Interop.Excel;
+//using System.Runtime.InteropServices;
+//using Excel = Microsoft.Office.Interop.Excel;
+//using static System.Console;
+
 
 namespace ExcelParser
 {
-    class Program
+    internal class Program
     {
+        static internal List<int> Dayoweeks = new List<int> { };
+
         static void Main(string[] args)
         {
-            List<string> test1 = new List<string> { };
-            test1.Add("1");
-            test1.Add("2");
-            test1.Add("3");
-
-
-            Console.WriteLine(test1[0]);
-            Console.WriteLine(test1[1]);
-            Console.WriteLine(test1[2]);
-            //Console.WriteLine(test1[3]);
-            Console.ReadLine();
+            SQL.Parse();
         }
     }
 }
