@@ -95,36 +95,38 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="sword32.png" />
+    <Resource Include="pngs\sword32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="hearth32_norm.png" />
+    <Resource Include="pngs\hearth32_norm.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="shield32.png" />
+    <Resource Include="pngs\shield32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="alive32.png" />
+    <Resource Include="pngs\alive32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="gsd1_fr1.png" />
-    <Resource Include="knt3_fr1.png" />
-    <Resource Include="npc3_fr1.png" />
-    <Resource Include="scr1_fr2.png" />
+    <Resource Include="pngs\knt3_fr1.png" />
+    <Resource Include="pngs\npc3_fr1.png" />
+    <Resource Include="pngs\scr1_fr2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ballista.png" />
-    <Resource Include="bullet1.png" />
-    <Resource Include="elephant.png" />
+    <Resource Include="pngs\ballista.png" />
+    <Resource Include="pngs\bullet1.png" />
+    <Resource Include="pngs\elephant.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icons8-camel-32.png" />
+    <Resource Include="pngs\icons8-camel-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="gray.png" />
+    <Resource Include="pngs\gray.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="knt3_fr1 - Копировать.png" />
+    <Resource Include="pngs\knt3_fr1 - Копировать.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pngs\gsd1_fr1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
