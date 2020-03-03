@@ -472,7 +472,7 @@ namespace Army
             Tarmor.Text = $"{cur_armor}/{start_digits[2]}";
             Tcount.Text = $"{cur_count}/{start_digits[3]}";
             Tammo.Text = $"{cur_ammo}";
-        }
+        } // Обновление цифер в окне
         void RefreshToolTips()
         {
             List<Ballista> ballistalist = (from i in Storage where i.uname == "Bl" select (Ballista)i).ToList(); // Разложение общего MainStorage 
@@ -530,7 +530,7 @@ namespace Army
                 }
                 catch (Exception) { camelimages[i].ToolTip = "Юнит отсутствует"; }
             }
-        }
+        } // Обновление всплывающих подсказок
 
         public MainWindow()
         {
