@@ -10,7 +10,7 @@ namespace ExcelParser
     internal class Program
     {
         static internal List<int> Dayoweeks = new List<int> { };
-
+         
         static void Main(string[] args)
         {
             SQL.Parse();
