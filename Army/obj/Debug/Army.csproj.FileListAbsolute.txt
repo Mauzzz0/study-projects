@@ -1,0 +1,14 @@
+C:\Users\rusla\source\repos\Army\Army\bin\Debug\Army.exe.config
+C:\Users\rusla\source\repos\Army\Army\bin\Debug\Army.exe
+C:\Users\rusla\source\repos\Army\Army\bin\Debug\Army.pdb
+C:\Users\rusla\source\repos\Army\Army\obj\Debug\Army.csprojAssemblyReference.cache
+C:\Users\rusla\source\repos\Army\Army\obj\Debug\MainWindow.g.cs
+C:\Users\rusla\source\repos\Army\Army\obj\Debug\App.g.cs
+C:\Users\rusla\source\repos\Army\Army\obj\Debug\Army_MarkupCompile.cache
+C:\Users\rusla\source\repos\Army\Army\obj\Debug\Army_MarkupCompile.lref
+C:\Users\rusla\source\repos\Army\Army\obj\Debug\MainWindow.baml
+C:\Users\rusla\source\repos\Army\Army\obj\Debug\Army.g.resources
+C:\Users\rusla\source\repos\Army\Army\obj\Debug\Army.Properties.Resources.resources
+C:\Users\rusla\source\repos\Army\Army\obj\Debug\Army.csproj.GenerateResource.cache
+C:\Users\rusla\source\repos\Army\Army\obj\Debug\Army.exe
+C:\Users\rusla\source\repos\Army\Army\obj\Debug\Army.pdb
