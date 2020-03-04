@@ -20,6 +20,7 @@ namespace Army
     /// </summary>
     public partial class MainWindow : Window
     {
+
         ImageSource dis = new ImageSourceConverter().ConvertFromString("textures/icons/gray.png") as ImageSource;                  // Загрузка источников
         ImageSource Iball = new ImageSourceConverter().ConvertFromString("textures/icons/ballista.png") as ImageSource;            // изображений
         ImageSource Iel = new ImageSourceConverter().ConvertFromString("textures/icons/elephant.png") as ImageSource;              //
