@@ -1,7 +1,9 @@
 function test(key, a) {
         if(key == "Enter"){
-            alert(a.value.toUpperCase());
+            text = a.value.toUpperCase();
+			document.getElementById("groop").innerHTML = text;
             a.value = "";
+
         }
 
     }
