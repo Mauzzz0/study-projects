@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <title>Расписание РТУ МИРЭА</title>
         <link href="style.css" rel="stylesheet">
+        <script src="script.js"></script>
     </head>
     
     <body>
@@ -19,7 +20,7 @@
             <div class="search">
                 <ul class="searcher">
                     <li class="search_text"><h2>Расписание для группы: </h2></li>
-                    <li class="sel_group"><input placeholder="АБВГ-01-02" name="group" maxlength="10"></li>
+                    <li class="sel_group"><input id="sel_group" onkeydown="return test(event.key, this)" placeholder="АБВГ-01-02" name="group" maxlength="10"></li>
                 </ul>
             </div>
             
