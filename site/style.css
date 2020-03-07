@@ -116,15 +116,25 @@ input{
 }
 
 .next_week{
+    font-size: 18px;
     color: darkgrey;
     width: 21%;
     text-align: right;
 }
 
+.next_week:hover{
+    text-decoration: underline;
+}
+
 .previous_week{
+    font-size: 18px;
     color: darkgrey;
     width: 21%;
     text-align: left;
+}
+
+.previous_week:hover{
+    text-decoration: underline;
 }
 
 table {
