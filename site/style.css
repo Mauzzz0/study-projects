@@ -137,12 +137,12 @@ input{
     text-decoration: underline;
 }
 
-table {
-    width: 15%;
+.day_card{
     margin: 10px;
+    width: 230px;
+    border-left: solid 1px darkgray;
     font-size: 18px;
     border-spacing: 0;
-    border: solid darkgrey 1px;
     border-radius: 10px;
     text-align: center;
 }
@@ -160,7 +160,9 @@ th {
 }
 
 th, td {
+    border-style: solid;
     border-width: 0 1px 1px 0;
+    border-color: darkgray;
 }
 
 th:first-child {
@@ -169,38 +171,67 @@ th:first-child {
 
 th:last-child {
     border-top-right-radius: 9px;
-    border-right: none;
 }
 
-td {
-    padding: 10px 20px;
-}
 tr:last-child td:first-child {
-border-radius: 0 0 0 10px;
+    border-radius: 0 0 0 10px;
 }
+
 tr:last-child td:last-child {
-border-radius: 0 0 10px 0;
+    border-radius: 0 0 10px 0;
 }
-tr td:last-child {
-border-right: none;
+
+
+.week{  
+    width: 100%;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pair_num{
+    text-align: center;
+    width: 10%;
+    border-right: solid darkgray 1px;
+    
+}
+
+.pair{
+    padding: 5px;
+    text-align: left;
+    width: 70%;
+    border-right: solid darkgray 1px;
+}
+
+.pair_name{
+    font-size: 16px;
+    line-height: 1em;
+}
+
+.pair_teach{
+    font-size:14px;
+    color: darkgray;
+    font-style: italic;
+}
+
+.cab{
+    text-align: center;
+    width: 30%;
+}
+
+.pair_row{
+    height: 80px;
+    border: solid darkgray 1px;
 }
 
 footer{
     color:white;
     background-color:royalblue;
-    height: 100px;
+    height: 90px;
     display: block;
     align-items: center;
     justify-content: center;
-}
-
-.week{
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    display: inline-flex;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 .href_mirea{

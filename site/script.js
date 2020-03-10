@@ -1,4 +1,4 @@
-function setDates(date){
+function setDates(){
     
     var date = new Date(),
     targetDay = 1, 
@@ -62,6 +62,7 @@ function setDates(date){
     year = a+b;
     res = w_day+" "+"("+day+"."+month+"."+year+")";
     document.getElementById("day_6").innerHTML = res;
+    document.getElementById("day_"+date.getDay()).style.backgroundColor = "red";
     
 }
 
@@ -73,9 +74,7 @@ function load(key, a) {
             a.value = "";
         } 
         else{
-            a.value = "";
-            setDates(new Date());
+            document.getElementById('now_week').scrollIntoView();
         }
     }
 }
-    

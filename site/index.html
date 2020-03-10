@@ -5,10 +5,11 @@
         <meta charset="utf-8">
         <title>Расписание РТУ МИРЭА</title>
         <link href="style.css" rel="stylesheet">
+        <link href="logo.png" rel="icon">
         <script src="script.js"></script>
     </head>
     
-    <body>
+    <body onload="setDates();">
         <header class="header">
             <ul>
                 <li class="logo_li"><img class = "logo" src="logo.png" alt="logo"></li>
@@ -20,7 +21,7 @@
             <div class="search">
                 <ul class="searcher">
                     <li class="search_text"><h2>Расписание для группы: </h2></li>
-                    <li class="sel_group"><input id="sel_group" onkeydown="return load(event.key, this)"  placeholder="АБВГ-01-02" name="group" maxlength="10"></li>
+                    <li class="sel_group"><input pattern="2[0-9]{3}-[0-9]{3}" id="sel_group" onkeydown="return load(event.key, this);"  placeholder="АБВГ-01-02" name="group" maxlength="10"></li>
                 </ul>
             </div>
             
@@ -34,224 +35,219 @@
                     <li class="right">></li>
                 </ul>
             </div>
-            <div class="week">
-                    <table>
+            <div id="week" class="week">
+                <table class="day_card">
                         <tr class="table_head" >
                             <th id="day_1" colspan="3"><br></th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Математический анализ<br>
-                            Беклемишев С.А.</td>
-                            <td>456</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Информатика<br> Федотов М.В.</td>
-                            <td>823</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Английский язык<br>Лукашок Л.Ы.</td>
-                            <td>111</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Дискретная математика<br>Йог И.Ы.</td>
-                            <td>991</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>5</td>
-                            <td></td>
-                            <td></td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>6</td>
-                            <td></td>
-                            <td></td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
                 </table>
-                <table>
+                <table class="day_card">
                         <tr class="table_head" >
                             <th id="day_2" colspan="3"><br></th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Математический анализ<br>
-                            Беклемишев С.А.</td>
-                            <td>456</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Информатика<br> Федотов М.В.</td>
-                            <td>823</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Английский язык<br>Лукашок Л.Ы.</td>
-                            <td>111</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Дискретная математика<br>Йог И.Ы.</td>
-                            <td>991</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>5</td>
-                            <td></td>
-                            <td></td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>6</td>
-                            <td></td>
-                            <td></td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
                 </table>
-                <table>
+                <table class="day_card">
                         <tr class="table_head" >
                             <th id="day_3" colspan="3"><br></th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Математический анализ<br>
-                            Беклемишев С.А.</td>
-                            <td>456</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Информатика<br> Федотов М.В.</td>
-                            <td>823</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Английский язык<br>Лукашок Л.Ы.</td>
-                            <td>111</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Дискретная математика<br>Йог И.Ы.</td>
-                            <td>991</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>5</td>
-                            <td></td>
-                            <td></td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>6</td>
-                            <td></td>
-                            <td></td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
                 </table>
-                <table>
+                <table class="day_card">
                         <tr class="table_head" >
                             <th id="day_4" colspan="3"><br></th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Математический анализ<br>
-                            Беклемишев С.А.</td>
-                            <td>456</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Информатика<br> Федотов М.В.</td>
-                            <td>823</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Английский язык<br>Лукашок Л.Ы.</td>
-                            <td>111</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Дискретная математика<br>Йог И.Ы.</td>
-                            <td>991</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>5</td>
-                            <td></td>
-                            <td></td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>6</td>
-                            <td></td>
-                            <td></td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
                 </table>
-                <table>
+                <table class="day_card">
                         <tr class="table_head" >
                             <th id="day_5" colspan="3"><br></th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Математический анализ<br>
-                            Беклемишев С.А.</td>
-                            <td>456</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Информатика<br> Федотов М.В.</td>
-                            <td>823</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Английский язык<br>Лукашок Л.Ы.</td>
-                            <td>111</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Дискретная математика<br>Йог И.Ы.</td>
-                            <td>991</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>5</td>
-                            <td></td>
-                            <td></td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>6</td>
-                            <td></td>
-                            <td></td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
                 </table>
-                <table>
+                <table class="day_card">
                         <tr class="table_head" >
                             <th id="day_6" colspan="3"><br></th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Математический анализ<br>
-                            Беклемишев С.А.</td>
-                            <td>456</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Информатика<br> Федотов М.В.</td>
-                            <td>823</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Английский язык<br>Лукашок Л.Ы.</td>
-                            <td>111</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Дискретная математика<br>Йог И.Ы.</td>
-                            <td>991</td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>5</td>
-                            <td></td>
-                            <td></td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
-                        <tr>
-                            <td>6</td>
-                            <td></td>
-                            <td></td>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
                         </tr>
                 </table>
-            </div>                
+                
+            </div>
         </content>
         
         <footer>
