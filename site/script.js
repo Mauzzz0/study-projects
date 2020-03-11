@@ -62,19 +62,32 @@ function setDates(){
     year = a+b;
     res = w_day+" "+"("+day+"."+month+"."+year+")";
     document.getElementById("day_6").innerHTML = res;
-    document.getElementById("day_"+date.getDay()).style.backgroundColor = "red";
+    document.getElementById("day_"+date.getDay()).style.backgroundImage = "linear-gradient(-60deg, #ff5858 0%, #f09819 100%)";
     
 }
 
 function load(key, a) {
+    text = a.value.toUpperCase();
     if (key == "Enter"){
-        text = a.value.toUpperCase();
         if(text.length != 10){
             alert("Введите группу!");
-            a.value = "";
+            
         } 
         else{
+            alert("Расписание для группы: "+text);
             document.getElementById('now_week').scrollIntoView();
+        }
+    }
+    else{
+        if(a.value.length<4){
+        }
+        else if((a.value.length==4 || a.value.length==7 )&& key!="Backspace"){
+            if(key=="-"){
+                a.value = text.slice(0, text.length());
+            }
+            else{
+                a.value+="-";
+            }
         }
     }
 }
