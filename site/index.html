@@ -7,12 +7,9 @@
         <link href="style.css" rel="stylesheet">
         <link href="logo.png" rel="icon">
         <script src="script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
-
     </head>
     
-    <body onload="setDates();">
+    <body onload="return setDates();">
         <header class="header grad">
             <ul>
                 <li class="logo_li"><img class = "logo" src="logo.png" alt="logo"></li>
@@ -24,10 +21,7 @@
             <div class="search">
                 <ul class="searcher">
                     <li class="search_text"><h2>Расписание для группы: </h2></li>
-                    <li class="sel_group"><div class="input"><input id="sel_group" onkeydown="return load(event.key, this);"  placeholder="____-__-__" name="group" maxlength="10">
-                        <script>
-                        $('.sel_group').mask('9999-99-99');
-                        </script>
+                    <li class="sel_group"><div class="input"><input id="sel_group" onkeydown="return load(event.key, this);"  placeholder="АААА-00-11" name="group" maxlength="10">
                         </div></li>
                 </ul>
             </div>
@@ -35,10 +29,10 @@
             <div class="week_navigation">
                 <ul class="week_num">
                     <li class="left"><</li>
-                    <li id = "previous_week" class="previous_week"><a class="previous_week_a" href="index.html">Предыдущая неделя</a></li>
+                    <li id = "previous_week" class="previous_week"><a class="previous_week_a" onclick="return set_previous_week();">Предыдущая неделя</a></li>
                     <li id="now_week" class="now_week"><h2>1 неделя</h2></li>
                     
-                    <li id = "next_week" class="next_week"><a class="next_week_a"href="index.html" >Следующая неделя</a></li>
+                    <li id = "next_week" class="next_week"><a class="next_week_a" onclick="return set_next_week()">Следующая неделя</a></li>
                     <li class="right">></li>
                 </ul>
             </div>

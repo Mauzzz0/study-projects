@@ -81,6 +81,10 @@ input{
     border: solid darkgray 1px;
 }
 
+.week_navigation{
+    user-select: none;
+}
+
 
 .week_num{
     margin-left: 5px;
@@ -114,6 +118,10 @@ input{
     color: darkgrey;
 }
 
+.next_week:active{
+    color: royalblue;
+}
+
 .previous_week_a{
     text-decoration: none;
     color: darkgrey;
@@ -128,6 +136,10 @@ input{
 
 .next_week:hover{
     text-decoration: underline;
+}
+
+.previous_week:active{
+    color: royalblue;
 }
 
 .previous_week{
