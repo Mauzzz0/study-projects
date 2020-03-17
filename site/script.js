@@ -5,7 +5,6 @@ function setDates(){
     targetDay = 1, 
     targetDate = new Date();
     var delta = targetDay - date.getDay();
-
     if (delta > 0) {targetDate.setDate(date.getDate()-6)}
     
     else {
