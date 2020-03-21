@@ -5,37 +5,42 @@
         <meta charset="utf-8">
         <title>Расписание РТУ МИРЭА</title>
         <link href="style.css" rel="stylesheet">
-        <link href="logo.png" rel="icon">
-        <script src="script.js"></script>
+        <link href="img/logo.png" rel="icon">
+        
+        
     </head>
     
-    <body onload="return setDates();">
+    <body>
+        <form class = 'page'>
         <header class="header grad">
             <ul>
-                <li class="logo_li"><img class = "logo" src="logo.png" alt="logo"></li>
+                <li class="logo_li"><img title="Переход к текущей неделе" class = "logo" src="img/logo.png" alt="logo"></li>
                 <li  class="rtu"><h1 class = "mir">Расписание РТУ МИРЭА</h1></li>
             </ul>
         </header>
         
         <content>
-            <div class="search">
-                <ul class="searcher">
-                    <li class="search_text"><h2>Расписание для группы: </h2></li>
-                    <li class="sel_group"><div class="input"><input id="sel_group" onkeydown="return load(event.key, this);"  placeholder="АААА-00-11" name="group" maxlength="10">
-                        </div></li>
-                </ul>
-            </div>
+                <div class="searcher" style="display: block;">
+                    <label class="search_text">Расписание для группы
+                        <input type="text" class="input_group" placeholder="АААА-00-11" maxlength="10" required>
+                    </label>
+                    <ul class="dropdown">
+
+                    </ul>
+                </div>
             
             <div class="week_navigation">
                 <ul class="week_num">
-                    <li class="left"><</li>
-                    <li id = "previous_week" class="previous_week"><a class="previous_week_a" onclick="return set_previous_week();">Предыдущая неделя</a></li>
+                    <li class="arrow"><</li>
+                    <li id = "previous_week" class="wek previous_week">Предыдущая неделя</li>
+
                     <li id="now_week" class="now_week"><h2>1 неделя</h2></li>
                     
-                    <li id = "next_week" class="next_week"><a class="next_week_a" onclick="return set_next_week()">Следующая неделя</a></li>
-                    <li class="right">></li>
+                    <li id = "next_week" class="wek next_week">Следующая неделя</li>
+                    <li class="arrow">></li>
                 </ul>
             </div>
+
             <div id="week" class="week">
                 <table class="day_card">
                         <tr class="table_head grad" >
@@ -254,5 +259,8 @@
         <footer>
             <a href="http://mirea.ru" target="blank" class="href_mirea">Сайт РТУ МИРЭА</a>
         </footer>
+        </form>
+        <script src="script.js"></script>
+        <script src='additions/datejs.js'>    </script>
     </body>
 </html>
