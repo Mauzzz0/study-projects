@@ -5,8 +5,8 @@
         new string name;
         public int armor { get; }
         new public int hp { get; }
-        Animal animal; // Нарушение принципа инверсии зависимостей,
-        Unit unit;     // фикс выйдет громоздким
+        Animal animal; 
+        Unit unit;    
 
         public Rider(string name, int hp, int damage, string uname, int uarmor, string uarmor_name, int uhp, int udamage, string aname, int aspeed, int ahp, int adamage)
             : base(name,hp,damage) // ":base(..)" - костыль, чтобы всадник поместить в один список со всей армией
