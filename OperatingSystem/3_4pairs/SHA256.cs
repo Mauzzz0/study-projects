@@ -24,10 +24,12 @@ namespace OperatingSystem
         {
             //string inp = "AAAAA";
             //WriteLine(ComputeHash(inp,new SHA256CryptoServiceProvider()));
-            Bruteforce("AAAAA","CCCCC","AA");
+
+            //BruteforceRecursive(new char[] { 'A', 'A', 'A', 'A', 'A'}, new char[]{ 'C', 'C', 'C', 'C', 'C'}, "AA");
+            WordGen();
         }
 
-        static public void Bruteforce(string _start, string _finish, string result)
+        static public void BruteforceLinear(string _start, string _finish, string result)
         {
             int[] start = { 0, 0, 0, 0, 0 };
             int[] finish = { 0, 0, 0, 0, 0 };
@@ -53,6 +55,46 @@ namespace OperatingSystem
                     WriteLine();
                 }
             }
+        }
+        static public void BruteforceRecursive(char[] _start, char[] _finish, string result)
+        {
+            // if () {}
+            char[] cur = _start;
+            if (_start[4] < 90)
+            {
+                cur[4]++; 
+            }
+            else
+            {
+                // AAAAAAAAAA
+            }
+        }
+
+        static public void WordGen()
+        {
+            char start = 'A';
+            char finish = 'C';
+            char[] current = { 'A', 'A', 'A', 'A', 'A' };
+
+            for (int i=0; i < 5; i++)
+            {
+                for (int j=65; j<=Convert.ToInt32(finish); j++)
+                {
+                    current[i] = (char)j;
+                    Write(current[0] + " ");
+                    Write(current[1] + " ");
+                    Write(current[2] + " ");
+                    Write(current[3] + " ");
+                    Write(current[4] + "    ");
+                    Write(current[4] + " ");
+                    Write(current[3] + " ");
+                    Write(current[2] + " ");
+                    Write(current[1] + " ");
+                    Write(current[0] + " ");
+                    WriteLine();
+                }
+            }
+            ReadKey();
         }
     }
 }
