@@ -11,7 +11,7 @@ namespace OperatingSystem
     {
         static void Main(string[] args)
         {
-            Directories.fakeMain();
+            SHA256.fakeMain();
         }
     }
 }

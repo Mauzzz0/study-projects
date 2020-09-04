@@ -47,6 +47,7 @@
     <Compile Include="1_2pairs\DiskInfo.cs" />
     <Compile Include="1_2pairs\Files.cs" />
     <Compile Include="1_2pairs\FileStream1.cs" />
+    <Compile Include="3_4pairs\SHA256.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
