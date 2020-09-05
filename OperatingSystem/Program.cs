@@ -11,7 +11,7 @@ namespace OperatingSystem
     {
         static void Main(string[] args)
         {
-            SHA256.fakeMain();
+            _3_4pairs_My.SHA_Main.fakeMain();
         }
     }
 }

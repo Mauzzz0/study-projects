@@ -11,9 +11,14 @@ using System.Dynamic;
 namespace OperatingSystem
 {
 
-    class SHA256
+    class SHA256pasha
     {
-        static public string ComputeHash(string input, HashAlgorithm algorithm)
+        public static bool br1;
+        public static bool br2;
+        public static bool br3;
+        public static bool br4;
+        public static int iteration = 0;
+        static public string ComputeHash(char[] input, HashAlgorithm algorithm)
         {
             Byte[] inputBytes = Encoding.UTF8.GetBytes(input);
             Byte[] hashedBytes = algorithm.ComputeHash(inputBytes);
@@ -21,12 +26,15 @@ namespace OperatingSystem
         }
 
         static public void fakeMain()
-        {
-            //string inp = "AAAAA";
-            //WriteLine(ComputeHash(inp,new SHA256CryptoServiceProvider()));
-
-            //BruteforceRecursive(new char[] { 'A', 'A', 'A', 'A', 'A'}, new char[]{ 'C', 'C', 'C', 'C', 'C'}, "AA");
-            WordGen();
+        {            
+            char[] chars = { 'a', 'a', 'a', 'a', 'a' };
+            //CoreRecursFunc(0, "11770b3ea657fe68cba19675143e4715c8de9d763d3c21a85af6b7513d43997d", chars);
+            Write(chars[0]);
+            Write(chars[1]);
+            Write(chars[2]);
+            Write(chars[3]);
+            Write(chars[4]);
+            ReadLine();
         }
 
         static public void BruteforceLinear(string _start, string _finish, string result)
@@ -81,6 +89,7 @@ namespace OperatingSystem
                 for (int j=65; j<=Convert.ToInt32(finish); j++)
                 {
                     current[i] = (char)j;
+                    if (j== Convert.ToInt32(finish))
                     Write(current[0] + " ");
                     Write(current[1] + " ");
                     Write(current[2] + " ");
@@ -95,6 +104,33 @@ namespace OperatingSystem
                 }
             }
             ReadKey();
+        }
+
+        public static void CoreRecursFunc(int i, string hash, char[] chars)
+        {
+            while (true)
+            {
+                string res = ComputeHash(chars, new SHA256CryptoServiceProvider()).ToLower();
+                if (i != 4)
+                    CoreRecursFunc(i + 1, hash, chars);
+                if (!br1 && res == hash)
+                    br1 = true;
+                if (chars[i] == 'z' || br1)
+                    break;
+                Write(res+"    ");
+                Write(chars[0]);
+                Write(chars[1]);
+                Write(chars[2]);
+                Write(chars[3]);
+                Write(chars[4]);
+                Write("    "+iteration);
+                WriteLine();
+                chars[i]++;
+                iteration++;
+            }
+            if (br1)
+                return;
+            chars[i] = 'a';
         }
     }
 }
