@@ -7,7 +7,7 @@ interface Mainable{
 public class Main {
 
     public static void main(String[] args) {
-        Mainable tmp = new Advanced2();
+        Mainable tmp = new Advanced3();
         tmp._main();
     }
 }
