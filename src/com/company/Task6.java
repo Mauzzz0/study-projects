@@ -1,7 +1,7 @@
 package com.company;
 
-public class Task6 {
-    public static void Task6Main(){
+public class Task6 implements Mainable{
+    public void _main(){
         int cur1 = 1;
         int cur2 = 1;
         int _cur;

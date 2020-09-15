@@ -1,8 +1,8 @@
 package com.company;
 import java.util.Scanner;
 
-public class Task5 {
-    public static void Task5Main(){
+public class Task5 implements Mainable{
+    public void _main(){
         Scanner in = new Scanner(System.in);
         System.out.print("Input a number: ");
         int num = in.nextInt();

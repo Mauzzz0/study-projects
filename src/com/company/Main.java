@@ -1,15 +1,13 @@
 package com.company;
 
-class Trash1 implements Runnable{
-    public void run(){
-        System.out.println("Trash1 action");
-    }
+interface Mainable{
+    public void _main();
 }
 
 public class Main {
-    //static Trash1 tr1;
 
     public static void main(String[] args) {
-       Neervel.Task1();
+        Mainable tmp = new Advanced2();
+        tmp._main();
     }
 }
