@@ -2,6 +2,8 @@ package com.company;
 
 public class Advanced2 implements Mainable{
     public void _main(){
+        for (int j=0; j<10;j++){ // Повторять следующий алгоритм n раз
+
         String str = "aaaaaaAAAAAAbbbBBBBBc"; // Просто тестовая строка на вход, можно получать её сканером
         char[] ch = new char[str.length()];  // Создаю массив букв такой же длины, что и строка
         for (int i = 0; i < str.length(); i++) { //
@@ -23,5 +25,5 @@ public class Advanced2 implements Mainable{
             if (letters[i] != 0) { counter++; }
         }
         System.out.println(counter); // Вывод ненулевых цифр в массиве  <=> кол-во уникальных букв в строке
-    }
+    }}
 }
