@@ -11,7 +11,7 @@ public class Advanced2 implements Mainable{
         }
 
         int[] letters = new int[26];                   // Массив длины 26, по одному индексу на каждую букву
-        for (int i=0; i<26;i++) { letters[i] = 0; }    // Заполняется нулями
+        for (int i=0; i<26; i++) { letters[i] = 0; }    // Заполняется нулями
 
         for (int i=0; i<ch.length;i++){      // В цикле перебираются все буквы из массива "ch"
             int current_letter = Character.toLowerCase(ch[i]);                 // Очередную букву перевожу в нижний регистр
