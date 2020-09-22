@@ -9,7 +9,7 @@ public class Task2 implements Mainable{
         if(num>12){
             System.out.println("Error");
         }
-        if (num>0 & num <=2){
+        if ((num>0 & num <=2) | num == 12){
             System.out.println("Winter");
         }
         if (num>=3 & num <=5){
@@ -21,9 +21,5 @@ public class Task2 implements Mainable{
         if (num>=9 & num <=11){
             System.out.println("Autumn");
         }
-        if (num==12){
-            System.out.println("Winter");
-        }
-
     }
 }
