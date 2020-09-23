@@ -1,0 +1,18 @@
+ena
+conf t
+
+hostname "C-R-4-2"
+
+int e0/0
+description "C-R-4"
+ip addr 30.30.2.1 255.255.255.252
+no shutdown
+
+int e0/1
+description "OpenVPN-L2"
+ip addr 30.30.22.2 255.255.255.0
+no shutdown
+
+exit
+exit
+write

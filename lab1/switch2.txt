@@ -1,0 +1,47 @@
+ena
+conf t
+hostname "Switch-2"
+vtp domain ikbsp.ru
+vtp password 12345
+vtp version 3
+vtp mode client
+interface e0/0
+switchport trunk encapsulation dot1q
+switchport mode trunk
+description "To Switch-1"
+
+interface e0/1
+switchport trunk encapsulation dot1q
+switchport mode trunk
+description "To Switch-3"
+
+interface e0/2
+switchport mode access
+switchport access vlan 20
+descripton "PC-35"
+
+interface e0/3
+switchport mode access
+switchport access vlan 10
+description "PC-14"
+
+interface e1/0
+switchport mode access
+switchport access vlan 30
+description "PC-29"
+
+interface e1/1
+switchport mode access
+switchport access vlan 30
+description "IPSec-L2TP-Client"
+
+interface e1/2
+switchport mode access
+switchport access vlan 30
+description "PC-30"
+
+exit
+exit
+show interfaces status
+
+

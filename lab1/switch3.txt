@@ -1,0 +1,51 @@
+ena
+conf t
+hostname "Switch-3"
+vtp domain ikbsp.ru
+vtp password 12345
+vtp version 3
+vtp mode client
+
+interface e0/2
+description "To router"
+switchport trunk encapsulation dot1q
+switchport mode trunk
+
+interface e0/0
+description "To switch2"
+switchport trunk encapsulation dot1q
+switchport mode trunk
+
+interface e0/1
+description "To switch4"
+switchport trunk encapsulation dot1q
+switchport mode trunk
+
+interface e0/3
+description "To PC32"
+switchport mode access
+switchport access vlan 30
+
+interface e1/0
+description "To PC31"
+switchport mode access
+switchport access vlan 30
+
+interface e1/1
+description "To OpenVPN client"
+switchport mode access
+switchport access vlan 40
+
+interface e1/2
+description "To PC24"
+switchport mode access
+switchport access vlan 40
+
+interface e1/3
+description "To PC25"
+switchport mode access
+switchport access vlan 40
+
+exit
+exit
+show interfaces status

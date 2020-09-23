@@ -1,0 +1,29 @@
+ena
+conf t
+
+hostname "C-R-2"
+
+int e0/0
+description "Router"
+ip addr 10.19.0.1 255.255.255.252
+no shutdown
+
+int e0/1
+description "C-R-2-1"
+ip addr 18.20.1.2 255.255.255.252
+no shutdown
+
+int e0/2
+description "C-R-2-2"
+ip addr 18.20.2.2 255.255.255.252
+no shutdown
+
+
+int e0/3
+description "C-R-2-3"
+ip addr 18.20.3.2 255.255.255.252
+no shutdown
+
+exit
+exit
+write

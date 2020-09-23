@@ -1,0 +1,40 @@
+ena
+
+int e1/1
+description "eBGP"
+ip addr 17.1.1.1 255.255.255.252
+no shutdown
+
+int e2/0
+description "eBGP"
+ip addr 14.1.1.1 255.255.255.252
+no shutdown
+
+int e1/3
+description "eBGP"
+ip addr 16.1.1.1 255.255.255.252
+no shutdown
+
+int e1/0
+description "C-R-4"
+ip addr 10.20.0.2 255.255.255.252
+no shutdown
+
+int e0/2
+description "C-R-2"
+ip addr 10.19.0.2 255.255.255.252
+no shutdown
+
+int e0/1
+description "C-R-1"
+ip addr 10.17.0.2 255.255.255.252
+no shutdown
+
+int e0/3
+description "C-R-1"
+ip addr 10.16.0.2 255.255.255.252
+no shutdown
+
+exit
+exit
+write

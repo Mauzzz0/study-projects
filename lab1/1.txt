@@ -1,0 +1,30 @@
+ena
+vtp primary vlan
+ena
+conf t
+vtp domain server
+vtp version 3
+VLAN 10,20,30,40,50,60,70
+int e0/0
+switchport trunk encapsulation dot1q
+switchport mode trunk
+description "To Switch-2"
+int range e0/1-2
+switchport mode access
+switchport access vlan 10
+int e1/1
+switchport mode access
+switchport access vlan 70
+int e1/0
+switchport mode access
+switchport access vlan 20
+description "SSH-Client"
+int e0/2
+description 'PC-12"
+int e0/1
+description 'PC-13"
+int e1/0
+description 'PC-34"
+exit
+exit
+show interfaces status
