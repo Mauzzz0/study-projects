@@ -1,0 +1,35 @@
+ena
+conf t
+
+hostname C-OSPF-5
+
+int e0/0
+Description "to C-OSPF-4"
+ip addr 12.13.10.18 255.255.255.252
+no shutdown
+
+int e0/1
+description "to M-OSPF-5"
+ip addr 12.12.16.2 255.255.255.252
+no shutdown
+
+int e0/2
+description "to M-OSPF-4"
+ip addr 12.11.12.2 255.255.255.252
+no shutdown
+
+int e0/3
+description "to EXtraNet-2"
+no shutdown
+
+exit
+
+router ospf 1
+network 12.13.10.16 0.0.0.3 area 0
+network 12.12.16.0 0.0.0.3 area 0
+network 12.11.12.0 0.0.0.3 area 0
+redistribute connected
+
+exit
+exit
+write
