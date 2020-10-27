@@ -40,6 +40,11 @@ switchport mode access
 switchport access vlan 30
 description "PC-30"
 
+interface e1/3
+switchport mode access
+switchport access vlan 80
+description "PC-30"
+
 exit
 exit
 show interfaces status

@@ -84,5 +84,29 @@ exit
 ip dhcp excluded-address 10.0.10.1 10.0.10.9
 ip dhcp excluded-address 10.0.10.101 10.0.10.254
 
+
+
+int e0/0.80
+encapsulation dot1Q 80
+ip address 10.0.80.254 255.255.255.0
+ip dhcp pool VLAN80POOL
+network 10.0.80.0 255.255.255.0
+default-router 10.0.80.254
+dns-server 8.8.8.8 8.8.4.4
+exit
+ip dhcp excluded-address 10.0.80.1 10.0.80.9
+ip dhcp excluded-address 10.0.80.101 10.0.80.254
+
+int e0/0.90
+encapsulation dot1Q 90
+ip address 10.0.90.254 255.255.255.0
+ip dhcp pool VLAN90POOL
+network 10.0.90.0 255.255.255.0
+default-router 10.0.90.254
+dns-server 8.8.8.8 8.8.4.4
+exit
+ip dhcp excluded-address 10.0.90.1 10.0.90.9
+ip dhcp excluded-address 10.0.90.101 10.0.90.254
+
 Для других WLAN меняем 70 на нужный, причем 70 везде, даже в айпишнике
 
