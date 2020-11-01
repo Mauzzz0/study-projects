@@ -1,0 +1,10 @@
+ena
+conf t
+
+access-list 1 permit any
+ip nat source list 1 interface e0/3 overload
+int e0/3
+ip nat outside
+/// time
+int range e0/0-2
+ip nat inside

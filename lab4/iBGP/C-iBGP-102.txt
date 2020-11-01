@@ -5,12 +5,12 @@ hostname C-iBGP-102
 
 int e0/0
 description Main_Router
-ip addr 16.1.1.102 255.255.255.252
+ip addr 16.1.1.102 255.255.255.0
 no shut
 
 int e0/1
 description M-OSPF-10
-ip addr 15.1.1.102 255.255.255.252
+ip addr 15.1.1.102 255.255.255.0
 no shut
 
 int e1/0
@@ -32,7 +32,7 @@ no shut
 
 int e1/1
 description AAA
-ip addr 61.61.61.102 255.255.255.252
+ip addr 61.61.61.102 255.255.255.0
 no shut
 
 exit
@@ -41,9 +41,9 @@ router bgp 400
 network 13.1.1.0 mask 255.255.255.0
 network 13.1.2.0 mask 255.255.255.0
 network 13.1.3.0 mask 255.255.255.0
-network 15.1.1.0
-network 16.1.1.0
-network 61.61.61.0 mask 255.255.255.252
+network 15.1.1.0 mask 255.255.255.0
+network 16.1.1.0 mask 255.255.255.0
+network 61.61.61.0 mask 255.255.255.0
 
 neighbor 13.1.1.15 remote-as 400
 neighbor 13.1.2.101 remote-as 400

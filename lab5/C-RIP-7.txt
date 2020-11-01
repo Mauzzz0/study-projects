@@ -1,0 +1,4 @@
+ena
+conf t
+int e1/0
+ip route 0.0.0.0 0.0.0.0  80.18.83.2
