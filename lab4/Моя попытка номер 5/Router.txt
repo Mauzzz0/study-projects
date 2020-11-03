@@ -2,29 +2,28 @@ ena
 conf t
 
 int e1/1
+description C-RIP-1
 ip addr 17.1.1.254 255.255.255.0
 no shut
 
 int e2/0
+description M-OSPF-10
 ip addr 14.1.1.254 255.255.255.0
 no shut
 
 int e1/3
+description C-iBGP-102
 ip addr 16.1.1.254 255.255.255.0
 no shut
 
 router bgp 100
-
 neighbor 17.1.1.1 remote-as 200
 neighbor 14.1.1.10 remote-as 300
 neighbor 16.1.1.102 remote-as 400
 
+network 16.1.1.0 mask 255.255.255.0
 network 17.1.1.0 mask 255.255.255.0
 network 14.1.1.0 mask 255.255.255.0
-network 16.1.1.0 mask 255.255.255.0
-
-redistribute static
-redistribute connected
 
 exit
 exit
