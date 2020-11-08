@@ -1,0 +1,31 @@
+ena
+conf t
+
+hostname C-iBGP-102
+
+int e0/0
+description Main_Router
+ip addr 16.1.1.102 255.255.255.0
+no shut
+
+int e0/1
+description M-OSPF-10
+ip addr 15.1.1.102 255.255.255.0
+no shut
+
+exit
+router bgp 400
+
+network 15.1.1.0 mask 255.255.255.0
+network 16.1.1.0 mask 255.255.255.0
+
+redistribute connected
+redistribute static
+
+neighbor 15.1.1.10 remote-as 300
+neighbor 16.1.1.254 remote-as 100
+
+exit
+exit
+wr
+
