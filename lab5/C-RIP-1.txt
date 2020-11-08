@@ -1,0 +1,26 @@
+ena
+conf t
+no ip domain lookup
+
+
+clock set 0:18:00 9 Nov 2020
+configure terminal
+ip domain name ikbsp.local
+crypto key generate rsa
+
+/// ручками
+2048 
+/// ручками
+
+service password-encryption
+username admin privilege 15 password 12345
+aaa new-model
+line vty 0 4
+transport input all
+logging synchronous
+exec-timeout 5 0
+exit
+enable password 12345
+
+exit
+wr

@@ -1,0 +1,35 @@
+//
+Скрипт подключается к C-RIP-1 (login: admin | password: 12345 | ena-password: 12345)
+ через telnet по ip 17.1.1.1 (int e0/0) и отключает интерфейс e0/3, а также проверяет успел ли BGP перестроить
+ маршрут быстрее, чем команда ping выдаст 'Success rate is 0 percent' (но ето не работает).
+Создание скрипта test3:
+1) nano test3.sh - создаём\открываем текстовым редактором nano файл test3.sh
+2) *вписываем, сохраняем*
+3) в root@ubuntu:~# пишем: chmod +x ./test3.sh
+4) После всего этого пишем ./test3.sh
+//
+
+#!/bin/bash
+(
+sleep 1;
+echo -en "admin\r";
+sleep 1;
+echo -en "12345\r";
+sleep 1;
+echo -en "ena\r";
+sleep 1;
+echo -en "12345\r";
+sleep 1;
+echo -en "conf t\r";
+sleep 1;
+echo -en "int e0/3\r";
+sleep 1;
+echo -en "shut\r";
+sleep 1;
+echo -en "exit\r";
+sleep 1;
+if echo -en "ping 12.11.10.1\r" | grep 'Success rate is 0 percent'
+	then echo "..";
+	else echo -en "exit\r";
+fi
+) | telnet 17.1.1.1
