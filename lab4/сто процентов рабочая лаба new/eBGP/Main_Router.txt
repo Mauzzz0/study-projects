@@ -17,6 +17,7 @@ ip addr 16.1.1.254 255.255.255.0
 no shut
 
 router bgp 100
+redistribute static
 neighbor 17.1.1.1 remote-as 200
 neighbor 14.1.1.10 remote-as 300
 neighbor 16.1.1.102 remote-as 400
