@@ -19,6 +19,7 @@ public class ShellSorting{
     public static void MergeDimensionsToOne(ArrayList<ArrayList> matrix){
         /// TODO: Слияние
         // *New 1 line for new commit*
+        // *and one more((*
     }
 
     public static void SortMultithreading(ArrayList<Integer> storage){
