@@ -7,7 +7,7 @@ public class Generator {
     public static void Random(int len,ArrayList<Integer> array){
         Random rnd = new Random();
         for (int i=0; i<len;i++){
-            array.add(rnd.nextInt(1000));
+            array.add(rnd.nextInt(10000000));
         }
     }
 

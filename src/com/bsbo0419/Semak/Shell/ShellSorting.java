@@ -16,10 +16,18 @@ public class ShellSorting{
         }
     }
 
-    public static void MergeDimensionsToOne(ArrayList<ArrayList> matrix){
+    public static void LinearMerge(ArrayList<Integer> matrix){
         /// TODO: Слияние
-        // *New 1 line for new commit*
-        // *and one more((*
+        long startTime = System.currentTimeMillis();
+        Object[] temporary_object_array = matrix.toArray();
+        int[] temporary_result_array = new int[matrix.size()];
+        for (int i=0; i<matrix.size(); i++)
+        {
+            temporary_result_array[i] = (int)temporary_object_array[i];
+        }
+        Merge.sort(temporary_result_array,0,temporary_result_array.length-1);
+        long endTime = System.currentTimeMillis();
+        System.out.println("Classic merge sort execution time: " + (endTime-startTime) + "ms");
     }
 
     public static void SortMultithreading(ArrayList<Integer> storage){
@@ -68,8 +76,8 @@ public class ShellSorting{
             int finalI = i;
             thrds.add(new Thread(() -> Sort(matrix.get(finalI))));
         }
-        for (int i=0;i<thrds.size();i++){
-            thrds.get(i).start();
+        for (Thread thrd : thrds) {
+            thrd.start();
         }
 
         while (true){
@@ -84,9 +92,14 @@ public class ShellSorting{
             }
         }
 
-        System.out.println("Sub lists sorted");
+        // Выход отсортированных сублистов
+        System.out.println("Sublists sorted");
+        ArrayList<Integer> unsortedresult = new ArrayList<>();
+        for (ArrayList arrayList : matrix) {
+            unsortedresult.addAll(arrayList);
+        }
 
-        MergeDimensionsToOne(matrix);
+        LinearMerge(unsortedresult);
 
     }
 }
