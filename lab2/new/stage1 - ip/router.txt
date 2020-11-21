@@ -1,4 +1,5 @@
 ena
+conf t
 
 int e1/1
 description "eBGP"
