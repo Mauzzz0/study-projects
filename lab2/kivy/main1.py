@@ -1,3 +1,4 @@
+import random
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
@@ -29,67 +30,27 @@ class TreeApp(App):
         for i in range(maxdepth+1):
             inside_bl = BoxLayout(orientation='horizontal')
             for j in range(2 ** i):
-                try: inside_bl.add_widget(Label01(text=str(mx_lvl[i][j]), color=(0.5, 0.5, 0.5, 1)))
-                except: inside_bl.add_widget(Label01(text="err", color=(0.5, 0.5, 0.5, 1)))
+                lc = 0
+                rc = 0
+                try: lc = mx_lvl[i+1][j*2] 
+                except: pass
+                try: rc = mx_lvl[i+1][j*2+1] 
+                except: pass 
 
-                #leftchild = 0
-                #rightchild = 0
-                #try:
-                #    leftchild = mx_lvl[i + 1][(j * 2)]
-                #except:
-                #    leftchild = 0
-                #try:
-                #    rightchild = mx_lvl[i + 1][(j * 2) + 1]
-                #except:
-                #    rightchild = 0
-                #if leftchild != 0 and rightchild != 0:
-                #    inside_bl.add_widget(Label01(text=str(mx_lvl[i][j]), color=(0.5, 0.5, 0.5, 1)))
-                ## inside_bl.add_widget(Label01(text=str(mx_lvl[i][j]),color=(0.5,0.5,0.5,1)))
-                #elif leftchild != 0 and rightchild == 0:
-                #    inside_bl.add_widget(Label0(text=str(mx_lvl[i][j]), color=(0.5, 0.5, 0.5, 1)))
-                #elif leftchild == 0 and rightchild != 0:
-                #    inside_bl.add_widget(Label1(text=str(mx_lvl[i][j]), color=(0.5, 0.5, 0.5, 1)))
-                #elif leftchild == 0 and rightchild == 0:
-                #    try:
-                #        if str(mx_lvl[i][j]) == "0":
-                #            inside_bl.add_widget(Label00(text="0", color=(0.5, 0.5, 0.5, 1)))
-                #        else:
-                #            inside_bl.add_widget(Label00(text=str(mx_lvl[i][j]), color=(0.5, 0.5, 0.5, 1)))
-                #    except:
-                #        None
-
-                    # inside_bl.add_widget(Label01(text="byex",color=(0.5,0.5,0.5,0.5))) # тупа гений-красавчик
+                if lc != 0 and rc != 0:
+                    widget = Label01(text=str(mx_lvl[i][j]), color=(0,0,0, 1))
+                elif lc != 0 and rc == 0:
+                    widget = Label0(text=str(mx_lvl[i][j]), color=(0,0,0, 1))
+                elif lc == 0 and rc != 0:
+                    widget = Label1(text=str(mx_lvl[i][j]), color=(0,0,0, 1))
+                elif lc == 0 and rc == 0 and mx_lvl[i][j] != 0:
+                    widget = Label00(text=str(mx_lvl[i][j]), color=(0,0,0, 1))
+                else:
+                    widget = Label00(text=str(mx_lvl[i][j]), color=(0, 0, 0, 0.2))
+                
+                inside_bl.add_widget(widget)
             bl.add_widget(inside_bl)
         return bl
-    # def build(self):
-    #     bl = BoxLayout(orientation='vertical', padding=5, spacing=5)
-    #     for i in range(maxdepth):
-    #         inside_bl = BoxLayout(orientation='horizontal')
-    #         for j in range(2 ** i):
-    #
-    #             leftchild = None
-    #             rightchild = None
-    #             try: leftchild = mx_lvl[i+1][(j*2)]
-    #             except: leftchild = None
-    #             try: rightchild = mx_lvl[i+1][(j*2)+1]
-    #             except: rightchild = None
-    #             if leftchild is not None and rightchild is not None:
-    #                 inside_bl.add_widget(Label01(text=str(mx_lvl[i][j]),color=(0.5,0.5,0.5,1)))
-    #             #inside_bl.add_widget(Label01(text=str(mx_lvl[i][j]),color=(0.5,0.5,0.5,1)))
-    #             elif leftchild is not None and rightchild is None:
-    #                 inside_bl.add_widget(Label0(text=str(mx_lvl[i][j]),color=(0.5,0.5,0.5,1)))
-    #             elif leftchild is None and rightchild is not None:
-    #                 inside_bl.add_widget(Label1(text=str(mx_lvl[i][j]),color=(0.5,0.5,0.5,1)))
-    #             elif leftchild is None and rightchild is None:
-    #                 try:
-    #                     inside_bl.add_widget(Label00(text=str(mx_lvl[i][j]), color=(0.5, 0.5, 0.5, 1)))
-    #                 except:
-    #                     None
-    #
-    #
-    #                 #inside_bl.add_widget(Label01(text="byex",color=(0.5,0.5,0.5,0.5))) # тупа гений-красавчик
-    #         bl.add_widget(inside_bl)
-    #     return bl
 
 class BinarySearchTree:
     def __init__ (self, name):
@@ -390,21 +351,35 @@ def GenerateTrees():
     global mx_lvl
     global maxdepth
     treeA = BinarySearchTree("A")
-    treeA[17] = 17
-    treeA[10] = 10
-    treeA[11] = 11
-    treeA[12] = 12
-    treeA[13] = 13
-    treeA[35] = 35
-    treeA[5] = 5
-    treeA[20] = 20
-    treeA[40] = 40
-    treeA[4] = 4
-    treeA[45] = 45
-    treeA[50] = 50
-    treeA[51] = 51
-    treeA[52] = 52
-    treeA[53] = 53
+    for _ in range(random.randrange(50)):
+        rnd = random.randrange(100)
+        treeA[rnd] = rnd
+    #treeA[17] = 17
+    #treeA[10] = 10
+    #treeA[11] = 11
+    #treeA[12] = 12
+    #treeA[13] = 13
+    #treeA[35] = 35
+    #treeA[5] = 5
+    #treeA[20] = 20
+    #treeA[40] = 40
+    #treeA[4] = 4
+    #treeA[45] = 45
+    #treeA[50] = 50
+    #treeA[51] = 51
+    #treeA[52] = 52
+    #treeA[53] = 53
+    #treeA[2.5] = 2.5
+    #treeA[2.6] = 2.6
+    #treeA[2.7] = 2.7
+    #treeA[2.8] = 2.8
+    #treeA[2.9] = 2.9
+    #treeA[6] = 6
+    #treeA[7] = 7
+    #treeA[8] = 8
+    #treeA[19] = 19
+    #treeA[18] = 18
+
     #treeA[3] = 3
     #treeA[41] = 41
     #treeA[42] = 42
@@ -441,15 +416,9 @@ def GenerateTrees():
     mx_lvl = [[] for x in range(maxdepth+1)]
     treeA.MxLvl()
     print(mx_lvl)
-    #treeA.root.podstrah()
-    treeA.root.MxLink()
 
-    #treeA.root.genMxLvln()
-    #treeA.depthAndMxLvln()
-    #treeA.root.MxLinkn()
+    
     print("By-level matrix: " + str(mx_lvl))
-    #print(mx_link)
-    #print(mx_linkn)
 
 
 if __name__ == "__main__":
