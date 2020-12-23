@@ -1,0 +1,33 @@
+#:kivy 1.11.1
+<Label111>:
+    canvas.before:
+        Line:
+            points: self.center_x,self.center_y,self.center_x+250,self.center_y+250
+        Color:
+            rgba: 0,1,0,1
+<Label01>:
+    canvas.before:
+        Color:
+            rgba: 0,0,0,1
+        Line:
+            points: self.center_x,self.center_y*0.98,self.center_x-self.width/4,self.center_y-self.height/2-(self.height/2)*0.95
+        Line:
+            points: self.center_x,self.center_y*0.98,self.center_x+self.width/4,self.center_y-self.height/2-(self.height/2)*0.95
+
+<Label0>:
+    canvas.before:
+        Color:
+            rgba: 0,0,0,1
+        Line:
+            points: self.center_x,self.center_y*0.98,self.center_x-self.width/4,self.center_y-self.height/2-(self.height/2)*0.95
+        
+<Label1>:
+    canvas.before:
+        Color:
+            rgba: 0,0,0,1
+        Line:
+            points: self.center_x,self.center_y*0.98,self.center_x+self.width/4,self.center_y-self.height/2-(self.height/2)*0.95
+<Label00>:
+    canvas.before:
+        Color:
+            rgba: 0,0,0,1
