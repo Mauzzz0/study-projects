@@ -11,7 +11,6 @@ Window.size= (1920,1080)
 Window.clearcolor = (1, 1, 1, 1)
 
 
-mx_link = dict()
 mx_lvl = list()
 maxdepth = 0
 
@@ -265,13 +264,12 @@ class TreeNode:
     def MxLvl(self,c=-1):
         global mx_lvl
         c+=1
-        #if c == 0 and mx_lvl[c] != [self.key]:
-        #    mx_lvl[c].append(self.key)
         debug = self.key
+        
         # Сначала вход влево
         if self.leftChild:
             c = self.leftChild.MxLvl(c)
-        #
+        # Сканирование и добавление нулей
         if not self.hasAnyChildren():
             mx_lvl[c].append(self.key)
             g = 0
@@ -297,28 +295,13 @@ class TreeNode:
                 g += 1
                 for j in range(2 ** g):
                     mx_lvl[i].append(0)
-
-
-
-
         #
         # Потом вход вправо
         if self.rightChild:
             c = self.rightChild.MxLvl(c)
-
+        
         c-=1
         return c
-    def MxLink(self):
-        global mx_link
-        if self not in mx_link.keys():
-            mx_link[self.key] = [0,0]
-        if self.hasBothChildren():
-            mx_link[self.key][0]= self.leftChild.key
-            mx_link[self.key][1]= self.rightChild.key
-        if self.leftChild:
-            self.leftChild.MxLink()
-        if self.rightChild:
-            self.rightChild.MxLink()
     def preorder(self): # Прямой
         print(self.key, end=" ")
         if self.leftChild:
@@ -354,6 +337,7 @@ def GenerateTrees():
     for _ in range(random.randrange(50)):
         rnd = random.randrange(100)
         treeA[rnd] = rnd
+        
     #treeA[17] = 17
     #treeA[10] = 10
     #treeA[11] = 11
@@ -363,6 +347,7 @@ def GenerateTrees():
     #treeA[5] = 5
     #treeA[20] = 20
     #treeA[40] = 40
+    #treeA[4] = 4
     #treeA[4] = 4
     #treeA[45] = 45
     #treeA[50] = 50
@@ -416,9 +401,6 @@ def GenerateTrees():
     mx_lvl = [[] for x in range(maxdepth+1)]
     treeA.MxLvl()
     print(mx_lvl)
-
-    
-    print("By-level matrix: " + str(mx_lvl))
 
 
 if __name__ == "__main__":
