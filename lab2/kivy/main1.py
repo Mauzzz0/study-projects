@@ -7,6 +7,8 @@ from kivy.uix.label import Label
 from kivy.graphics import Rectangle
 from kivy.graphics import Color, Line
 from kivy.core.window import Window
+from kivy.uix.scrollview import ScrollView
+
 Window.size= (1920,1080)
 Window.clearcolor = (1, 1, 1, 1)
 
@@ -25,9 +27,15 @@ class Label00(Label):
 
 class TreeApp(App):
     def build(self):
-        bl = BoxLayout(orientation='vertical', padding=5, spacing=5)
+        #bl = BoxLayout(orientation='vertical', padding=5, spacing=5)
+        #bl = BoxLayout(orientation='vertical', size_hint=(None,None), size=(1000,1000)) #TODO: !!!!!
+        bl = GridLayout(cols=1,size_hint=(None,None),width=(2**(maxdepth+1)*20),height=(maxdepth+1)*200)
+        #w_bl = GridLayout(cols=1)
+        #bl.bind(minimum_width=bl.setter('width'))
         for i in range(maxdepth+1):
-            inside_bl = BoxLayout(orientation='horizontal')
+            #inside_bl = BoxLayout(orientation='horizontal')
+            inside_bl = GridLayout(cols = 2**i,size_hint=(None,None),width=(2**(maxdepth+1)*20),height=200)
+            #w_inside_bl = GridLayout(cols = 2**i)
             for j in range(2 ** i):
                 lc = 0
                 rc = 0
@@ -37,19 +45,26 @@ class TreeApp(App):
                 except: pass 
 
                 if lc != 0 and rc != 0:
-                    widget = Label01(text=str(mx_lvl[i][j]), color=(0,0,0, 1))
+                    widget = Label01(text=str(mx_lvl[i][j]), color=(0,0,0, 1),font_size='20sp')
+                    #widget = Button(text=str(mx_lvl[i][j]), color=(0,0,0, 1),font_size='20sp')
                 elif lc != 0 and rc == 0:
-                    widget = Label0(text=str(mx_lvl[i][j]), color=(0,0,0, 1))
+                    widget = Label0(text=str(mx_lvl[i][j]), color=(0,0,0, 1),font_size='20sp')
+                    #widget = Button(text=str(mx_lvl[i][j]), color=(0,0,0, 1),font_size='20sp')
                 elif lc == 0 and rc != 0:
-                    widget = Label1(text=str(mx_lvl[i][j]), color=(0,0,0, 1))
+                    widget = Label1(text=str(mx_lvl[i][j]), color=(0,0,0, 1),font_size='20sp')
+                    #widget = Button(text=str(mx_lvl[i][j]), color=(0,0,0, 1),font_size='20sp')
                 elif lc == 0 and rc == 0 and mx_lvl[i][j] != 0:
-                    widget = Label00(text=str(mx_lvl[i][j]), color=(0,0,0, 1))
+                    widget = Label00(text=str(mx_lvl[i][j]), color=(0,0,0, 1),font_size='20sp')
+                    #widget = Button(text=str(mx_lvl[i][j]), color=(0,0,0, 1),font_size='20sp')
                 else:
-                    widget = Label00(text=str(mx_lvl[i][j]), color=(0, 0, 0, 0.2))
-                
+                    widget = Label00(text=str(mx_lvl[i][j]), color=(0, 0, 0, 0),font_size='20sp')
+                    #widget = Button(text=str(mx_lvl[i][j]), color=(0, 0, 0, 0),font_size='20sp')
+
                 inside_bl.add_widget(widget)
             bl.add_widget(inside_bl)
-        return bl
+        root = ScrollView(size_hint=(None,None), size=(Window.width, Window.height))
+        root.add_widget(bl)
+        return root
 
 class BinarySearchTree:
     def __init__ (self, name):
@@ -330,14 +345,19 @@ class TreeNode:
                 yield elem
 
 def GenerateTrees():
-    global mx_link
     global mx_lvl
     global maxdepth
     treeA = BinarySearchTree("A")
-    for _ in range(random.randrange(50)):
-        rnd = random.randrange(100)
+    for _ in range(30):
+        rnd = random.randrange(2000)
         treeA[rnd] = rnd
-        
+    # [1,2,3,4,5,6,7,8,9,10,11,12,13,14,13.5,12.5,11.5,8.5,6.5,4.5,2.5]
+    # [11,12,13,14,13.5,12.5,11.5,14.5,14.1,14.6,14.51,14.65]
+    # [11,12,13,14,15,16,17,18,19,20,21] TODO: this!!
+    #for _ in [11,12,13,14,13.5,12.5,11.5,14.5,14.1,14.6,14.51,14.65]:
+    #    treeA[_] = _
+    #for _ in [3,1,2]:
+    #   treeA[_] = _
     #treeA[17] = 17
     #treeA[10] = 10
     #treeA[11] = 11
