@@ -5,4 +5,4 @@
 * Traverse tree 'A' `preorder`, print nodes.
 * Traverse tree 'B' `inorder`, print nodes.
 * Exclude from tree A `all the nodes present in tree B`.
-* Binary tree are rendered on canvas without overlapping and are scrollable on both axes.
+* Binary tree are rendered on canvas without overlapping and are `scrollable on both axes`.
