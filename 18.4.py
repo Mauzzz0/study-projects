@@ -1,4 +1,4 @@
-def continue_continue_making_sure_the_function_name_is_correct(string):
+def continue_continue_making_sure_the_function_name_is_correct(string: str):
     res = ""
     opnd = 0
     t = [x for x in string]

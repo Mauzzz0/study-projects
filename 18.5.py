@@ -1,4 +1,4 @@
-def continue_continue_continue_making_sure_the_function_name_is_correct(a, b):
+def continue_continue_continue_making_sure_the_function_name_is_correct(a: str, b: str):
     x1 = float(a.split(";")[0])
     y1 = float(a.split(";")[1])
     x2 = float(b.split(";")[0])

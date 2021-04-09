@@ -1,4 +1,4 @@
-def continue_making_sure_the_function_name_is_correct(n):
+def continue_making_sure_the_function_name_is_correct(n: int):
     n -= 1
     i = 0
     prev_fib1 = prev_fib2 = 0
