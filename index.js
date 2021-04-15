@@ -49,9 +49,10 @@ app.post('/UptadeToDo', (req, res) => {
 })
 
 app.post('todoList', (req, res) => {
-    let arr = [10];
+    let arr = [];
     for (i = 0; i < 10; i++){
         arr[i] = {
+            _id = i,
             title = 'Title',
             description = 'Description'
         }       
