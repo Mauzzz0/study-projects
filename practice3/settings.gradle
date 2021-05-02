@@ -1,0 +1,3 @@
+include ':intentapp'
+include ':app'
+rootProject.name = "practice3"
