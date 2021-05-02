@@ -1,3 +1,4 @@
+include ':systemintentsapp'
 include ':resultactivity'
 include ':share'
 include ':intentapp'
