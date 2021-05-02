@@ -1,3 +1,5 @@
+include ':notificationapp'
+include ':toastapp'
 include ':intentfilter'
 include ':multiactivity'
 include ':lifecycleactivity'
