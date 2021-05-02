@@ -1,3 +1,4 @@
+include ':intentfilter'
 include ':multiactivity'
 include ':lifecycleactivity'
 include ':app'
