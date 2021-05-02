@@ -14,8 +14,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onClickShowDialog(View view){
-        AlertDialogFragment dialogFragment = new AlertDialogFragment();
+    public void onClickShowDialog1(View view){
+        diag1 dialogFragment = new diag1();
+        dialogFragment.show(getSupportFragmentManager(), "mirea");
+    }
+
+    public void onClickShowDialog2(View view){
+        diag2 dialogFragment = new diag2();
+        dialogFragment.show(getSupportFragmentManager(), "mirea");
+    }
+
+    public void onClickShowDialog3(View view){
+        diag3 dialogFragment = new diag3();
         dialogFragment.show(getSupportFragmentManager(), "mirea");
     }
 
