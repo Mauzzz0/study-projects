@@ -1,3 +1,4 @@
+include ':mediarecorder'
 include ':camera'
 include ':accelerometer'
 include ':app'
