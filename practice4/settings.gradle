@@ -1,2 +1,3 @@
+include ':data_thread'
 include ':app'
 rootProject.name = "practice4"
