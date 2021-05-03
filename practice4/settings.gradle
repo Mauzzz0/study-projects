@@ -1,3 +1,4 @@
+include ':loadermanager'
 include ':looper'
 include ':data_thread'
 include ':app'
