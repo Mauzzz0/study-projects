@@ -1,3 +1,4 @@
+include ':camera'
 include ':accelerometer'
 include ':app'
 rootProject.name = "practice5"
