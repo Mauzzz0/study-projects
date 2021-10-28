@@ -1,0 +1,1 @@
+print(input().split('?')[1].split('&')[0].split('=')[1])
