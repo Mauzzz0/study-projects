@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Расписание РТУ МИРЭА</title>
+        <link href="style.css" rel="stylesheet">
+        <link href="img/logo.png" rel="icon">
+        
+        
+    </head>
+    
+    <body>
+        <form class = 'page'>
+        <header class="header grad">
+            <ul>
+                <li class="logo_li"><img title="Переход к текущей неделе" class = "logo" src="img/logo.png" alt="logo"></li>
+                <li  class="rtu"><h1 class = "mir">Расписание РТУ МИРЭА</h1></li>
+            </ul>
+        </header>
+        
+        <content>
+                <div class="searcher" style="display: block;">
+                    <label class="search_text">Расписание для группы
+                        <input type="text" class="input_group" placeholder="АААА-00-11" maxlength="10" required>
+                    </label>
+                    <ul class="dropdown">
+
+                    </ul>
+                </div>
+            
+            <div class="week_navigation">
+                <ul class="week_num">
+                    <li class="arrow"><</li>
+                    <li id = "previous_week" class="wek previous_week">Предыдущая неделя</li>
+
+                    <li id="now_week" class="now_week"><h2>1 неделя</h2></li>
+                    
+                    <li id = "next_week" class="wek next_week">Следующая неделя</li>
+                    <li class="arrow">></li>
+                </ul>
+            </div>
+
+            <div id="week" class="week">
+                <table class="day_card">
+                        <tr class="table_head grad" >
+                            <th id="day_1" colspan="3"><br></th>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                </table>
+                <table class="day_card">
+                        <tr class="table_head grad" >
+                            <th id="day_2" colspan="3"><br></th>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                </table>
+                <table class="day_card">
+                        <tr class="table_head grad" >
+                            <th id="day_3" colspan="3"><br></th>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                </table>
+                <table class="day_card">
+                        <tr class="table_head grad" >
+                            <th id="day_4" colspan="3"><br></th>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                </table>
+                <table class="day_card">
+                        <tr class="table_head grad" >
+                            <th id="day_5" colspan="3"><br></th>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                </table>
+                <table class="day_card">
+                        <tr class="table_head grad" >
+                            <th id="day_6" colspan="3"><br></th>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                        <tr class="pair_row">
+                            <td id="pair_num" class="pair_num"></td>
+                            <td id="pair" class="pair"><div class="pair_name" id="pair_name"></div><div class="pair_teach" id="pair_teach"></div></td>
+                            <td id="cab" class="id"></td>
+                        </tr>
+                </table>
+                
+            </div>
+        </content>
+        
+        <footer>
+            <a href="http://mirea.ru" target="blank" class="href_mirea">Сайт РТУ МИРЭА</a>
+        </footer>
+        </form>
+        <script src="script.js"></script>
+        <script src='additions/datejs.js'>    </script>
+    </body>
+</html>

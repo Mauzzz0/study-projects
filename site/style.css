@@ -1,0 +1,252 @@
+body, h1, h2, h3, h4, p, a {
+  margin: 0;
+  font-size: 100%; 
+  font-weight: normal;
+}
+
+*{
+    box-sizing: border-box;
+    /*border: solid black 1px;*/
+}
+
+body{
+    font-family: "calibri";
+    background: linear-gradient(353deg, rgba(255,255,255,1) 0%, rgba(254,255,247,1) 100%);
+}
+
+.header{
+    min-width: 30%;
+    background-color: royalblue;
+    width: 100%;
+    height: 120px;
+    user-select: none;
+    color: white;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+li{
+    float: left;
+}
+
+.logo_li{
+    width: 120px;
+    height: 120px;
+}
+
+.rtu{
+    font-size: 50px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 120px;
+    height: 120px;
+    align-content: center;
+    padding: 5px;
+}
+
+.logo:hover{
+    padding: 4px;
+}
+
+.searcher{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.search_text{
+    width: 50%;
+    font-size: 20px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+
+input{
+    background:linear-gradient(353deg, rgba(255,255,255,1) 0%, rgba(254,255,247,1) 100%);
+    text-transform: uppercase;
+    border: solid darkgray 1px;
+}
+
+.week_navigation{
+    user-select: none;
+}
+
+
+.week_num{
+    margin-left: 5px;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.arrow{
+    color: darkgrey;
+    font-size: 40px;
+    width: 4%;
+    margin-top: -5px;
+}
+
+.now_week{
+    width: 30%;
+    font-size: 40px;
+}
+
+.week_n{
+    text-decoration: none;
+    color: darkgrey;
+}
+
+.wek{
+    font-size: 20px;
+    color: darkgrey;
+    width: 31%;
+}
+
+.next_week{
+    text-align: right;
+}
+ 
+.previous_week{
+    text-align: left;
+}
+
+.wek:hover{
+    text-decoration: underline;
+}
+
+.wek:active{
+    color: rgb(247, 168, 21);
+}
+
+.day_card{
+    margin: 10px;
+    width: 230px;
+    border-left: solid 1px darkgray;
+    font-size: 18px;
+    border-spacing: 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+th {
+    background-image: linear-gradient(-225deg,  #495aff 0%, #0acffe 199%);
+    color: white;
+    padding: 10px 20px;
+}
+
+.table_head{
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: darkgray;
+}
+
+th:first-child {
+    border-top-left-radius: 9px;
+}
+
+th:last-child {
+    border-top-right-radius: 9px;
+}
+
+tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+
+.week{  
+    width: 100%;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pair_num{
+    text-align: center;
+    width: 10%;
+    border-right: solid darkgray 1px;
+    
+}
+
+.pair{
+    padding: 5px;
+    text-align: left;
+    width: 70%;
+    border-right: solid darkgray 1px;
+}
+
+.pair_name{
+    font-size: 16px;
+    line-height: 1em;
+}
+
+.pair_teach{
+    font-size:14px;
+    color: darkgray;
+    font-style: italic;
+}
+
+.cab{
+    text-align: center;
+    width: 30%;
+}
+
+.pair_row{
+    height: 80px;
+    border: solid darkgray 1px;
+}
+
+footer{
+    color:white;
+    background-color:royalblue;
+    height: 90px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.grad{
+    background-image: linear-gradient(-225deg,  #495aff 0%, royalblue 100%);
+}
+
+.href_mirea{
+    font-size: 40px;
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.href_mirea:hover{
+    text-decoration: underline;
+}

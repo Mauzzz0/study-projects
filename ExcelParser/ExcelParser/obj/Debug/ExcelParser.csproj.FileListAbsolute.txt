@@ -1,0 +1,6 @@
+C:\Users\rusla\source\repos\Timetable\ExcelParser\ExcelParser\bin\Debug\ExcelParser.exe.config
+C:\Users\rusla\source\repos\Timetable\ExcelParser\ExcelParser\bin\Debug\ExcelParser.exe
+C:\Users\rusla\source\repos\Timetable\ExcelParser\ExcelParser\bin\Debug\ExcelParser.pdb
+C:\Users\rusla\source\repos\Timetable\ExcelParser\ExcelParser\obj\Debug\ExcelParser.csprojAssemblyReference.cache
+C:\Users\rusla\source\repos\Timetable\ExcelParser\ExcelParser\obj\Debug\ExcelParser.exe
+C:\Users\rusla\source\repos\Timetable\ExcelParser\ExcelParser\obj\Debug\ExcelParser.pdb
