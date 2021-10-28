@@ -1,0 +1,23 @@
+ena
+conf t
+
+int e0/0
+description Main_Router
+ip addr 17.1.1.1 255.255.255.252
+no shut
+
+int e0/3
+description M-OSPF-10
+ip addr 18.1.1.1 255.255.255.252
+no shut 
+
+router bgp 200
+neighbor 17.1.1.254 remote-as 100
+neighbor 18.1.1.10 remote-as 300
+
+network 17.1.1.0 mask 255.255.255.0
+network 18.1.1.0 mask 255.255.255.0
+
+exit
+exit
+wr

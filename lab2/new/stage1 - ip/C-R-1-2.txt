@@ -1,0 +1,18 @@
+ena
+conf t
+
+hostname "C-R-1-2"
+
+int e0/0
+description "C-R-1"
+ip addr 17.16.2.1 255.255.255.252
+no shutdown
+
+int e0/1
+description "VPC54"
+ip addr 172.160.2.2 255.255.255.0
+no shutdown
+
+exit
+exit
+write

@@ -1,0 +1,5 @@
+system identity set name=M-OSPF-6
+ip address
+add interface=ether3 address=12.13.14.2/24
+/ip firewall nat
+add chain=srcnat out-interface=ether1 action=masquerade disabled=no

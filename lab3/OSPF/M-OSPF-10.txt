@@ -1,0 +1,16 @@
+/system identity
+set name=M-OSPF-10
+/ip dhcp-client remove numbers=0
+/ip address
+add address=12.11.10.1/30 disabled=no comment="to M-OSPF-2" interface=ether3 network=12.11.10.0
+add address=12.12.10.1/30 disabled=no comment="to M-OSPF-4" interface=ether4 network=12.12.11.0
+add address=12.13.10.1/30 disabled=no comment="to C-OSPF-1" interface=ether5 network=12.11.11.0
+
+/routing ospf
+/interface bridge add name=loopback
+/ip address add address=10.255.255.10/32 interface=loopback
+instance set 0 router-id=10.255.255.10
+network
+add network=12.11.10.0/30 area=backbone
+add network=12.12.10.0/30 area=backbone
+add network=12.13.10.0/30 area=backbone

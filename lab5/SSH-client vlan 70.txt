@@ -1,0 +1,16 @@
+/// Linux
+login: root
+password: eve@123
+///
+
+telnet 10.0.70.1
+(switch1)
+
+/// Switch
+login: admin
+password: 12345
+///
+
+/// Switch ena-mode
+password: 12345
+///

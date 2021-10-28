@@ -1,0 +1,12 @@
+en
+conf t
+hostname C-R-1
+int e0/1
+no shutdown
+ip addr 17.16.1.1 255.255.255.252
+int e0/2
+no shutdown
+ip addr 17.16.2.1 255.255.255.252
+int e0/3
+no shutdown
+ip addr 17.16.3.1 255.255.255.252

@@ -1,0 +1,17 @@
+ena
+conf t
+
+router rip
+version 2
+no auto-summary
+redistribute connected
+
+
+network 140.56.8.0
+network 213.234.10.0
+network 100.120.85.0
+network 75.100.43.0
+
+exit
+exit
+write

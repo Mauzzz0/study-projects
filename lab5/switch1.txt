@@ -1,0 +1,28 @@
+enable
+clock set 2:00:00 1 Nov 2020 *current datetime*
+configure terminal
+ip domain name ikbsp.local
+crypto key generate rsa
+
+/// ручками
+2048 
+/// ручками
+
+service password-encryption
+username admin privilege 15 password 12345
+aaa new-model
+line vty 0 4
+transport input all
+logging synchronous
+exec-timeout 5 0
+exit
+enable password 12345
+int vlan 70
+ip addr 10.0.70.1 255.255.255.0
+no shutdown
+exit
+exit
+wr
+
+INFO: 
+https://habr.com/ru/post/68262/ 

@@ -1,0 +1,31 @@
+//
+Скрипт подключается к switch1 (login: admin | password: 12345 | ena-password: 12345)
+ через telnet по ip 10.0.70.1 и меняет хостнейм на "test".
+Создание скрипта test1:
+1) nano test1.sh - создаём\открываем текстовым редактором nano файл test1.sh
+2) *вписываем, сохраняем*
+3) в root@ubuntu:~# пишем: chmod +x ./test1.sh
+4) После всего этого пишем ./test1.sh
+//
+
+#!/bin/bash
+(
+sleep 1;
+echo -en "admin\r";
+sleep 1;
+echo -en "12345\r";
+sleep 1;
+echo -en "ena\r";
+sleep 1;
+echo -en "12345\r";
+sleep 1;
+echo -en "conf t\r";
+sleep 1;
+echo -en "hostname test\r";
+sleep 1;
+echo -en "exit\r";
+sleep 1;
+echo -en "wr\r";
+sleep 1;
+echo -en "exit\r";
+) | telnet 10.0.70.1

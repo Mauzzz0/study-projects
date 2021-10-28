@@ -1,0 +1,18 @@
+ena
+conf t
+
+hostname "C-R-3-2"
+
+int e0/0
+description "C-R-3"
+ip addr 16.18.2.1 255.255.255.252
+no shutdown
+
+int e0/1
+description "OpenVPN-L3"
+ip addr 169.185.2.2 255.255.255.0
+no shutdown
+
+exit
+exit
+write

@@ -1,0 +1,17 @@
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/ip address
+add address=75.100.44.2/30 comment="ToC-RIP-6" interface=ether2 network=75.100.44.0
+add address=80.18.84.2/30 comment="To C-RIP-7" interface=ether1 network=80.18.84.0
+add address=186.13.48.1/30 comment="To C-RIP-10" interface=ether3 network=186.13.48.0
+/ip route
+add distance=1 gateway=140.56.8.1
+add distance=1 gateway=140.56.9.1
+/routing rip
+set redistribute-connected=yes
+/routing rip network
+add network=75.100.44.0/30
+add network=80.18.84.0/30
+add network=186.13.48.0/30
+/system identity
+set name=M-RIP-1

@@ -1,0 +1,31 @@
+ena
+conf t
+int e0/0.70
+encapsulation dot1q 70
+ip addr 10.0.70.254 255.255.255.0
+int e0/0
+no shut
+exit
+
+
+clock set 2:00:00 1 Nov 2020 *current datetime*
+configure terminal
+ip domain name ikbsp.local
+crypto key generate rsa
+
+/// ручками
+2048 
+/// ручками
+
+service password-encryption
+username admin privilege 15 password 12345
+aaa new-model
+line vty 0 4
+transport input all
+logging synchronous
+exec-timeout 5 0
+exit
+enable password 12345
+
+exit
+wr

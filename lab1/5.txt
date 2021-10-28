@@ -1,0 +1,31 @@
+en
+conf t
+vtp domain server
+vtp version 3
+vtp mode client
+int e0/0
+switchport trunk encapsulation dot1q
+switchport mode trunk
+description "To Switch-4"
+int range e0/2-3
+switchport mode access
+switchport access vlan 60
+int e1/1
+switchport mode access
+switchport access vlan 50
+description "PC-18"
+int e1/0
+switchport mode access
+switchport access vlan 60
+description "OpenVPN-L3-Client"
+int e0/2
+description 'PC-20"
+int e0/3
+description 'PC-21"
+int e0/1
+switchport mode access
+switchport access vlan 40
+description 'PC-27"
+exit
+exit
+show interfaces status

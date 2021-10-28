@@ -1,0 +1,31 @@
+//
+Скрипт подключается к switch1 (login: admin | password: 12345 | ena-password: 12345)
+ через telnet по ip 10.0.70.1 и создаёт новый vlan 4000. До этого нужно в свиче прописать ena -> conf t -> vtp primary vlan
+Создание скрипта test2:
+1) nano test2.sh - создаём\открываем текстовым редактором nano файл test2.sh
+2) *вписываем, сохраняем ctrl+o*
+3) в root@ubuntu:~# пишем: chmod +x ./test2.sh
+4) После всего этого пишем ./test2.sh
+//
+
+#!/bin/bash
+(
+sleep 1;
+echo -en "admin\r";
+sleep 1;
+echo -en "12345\r";
+sleep 1;
+echo -en "ena\r";
+sleep 1;
+echo -en "12345\r";
+sleep 1;
+echo -en "conf t\r";
+sleep 1;
+echo -en "vlan 4000\r";
+sleep 1;
+echo -en "exit\r";
+sleep 1;
+echo -en "wr\r";
+sleep 1;
+echo -en "exit\r";
+) | telnet 10.0.70.1

@@ -1,0 +1,17 @@
+ena
+conf t
+
+hostname BBB
+
+int e0/0
+ip addr 161.161.161.1 255.255.255.0
+no shut
+
+router bgp 761
+network 161.161.161.0 mask 255.255.255.0
+neighbor 161.161.161.2 remote-as 600
+
+exit
+exit
+wr
+

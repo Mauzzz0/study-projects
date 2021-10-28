@@ -1,0 +1,42 @@
+ena
+conf t
+
+hostname C-iBGP-33
+
+int e0/0
+description C-iBGP-28
+ip addr 13.1.7.33 255.255.255.0
+no shut
+
+
+int e0/1
+description C-iBGP-23
+ip addr 13.1.10.33 255.255.255.0
+no shut
+
+
+int e0/2
+description C-iBGP-101
+ip addr 13.1.9.33 255.255.255.0
+no shut
+
+exit
+router bgp 400
+
+network 13.1.7.0 mask 255.255.255.0
+network 13.1.9.0 mask 255.255.255.0
+network 13.1.10.0 mask 255.255.255.0
+
+neighbor 13.1.10.23 remote-as 400
+neighbor 13.1.9.101 remote-as 400
+neighbor 13.1.7.28 remote-as 400
+
+neighbor 13.1.10.23 next-hop-self
+neighbor 13.1.9.101 next-hop-self
+neighbor 13.1.7.28 next-hop-self
+
+
+exit
+exit
+wr
+

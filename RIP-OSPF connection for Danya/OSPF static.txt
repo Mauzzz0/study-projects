@@ -1,0 +1,6 @@
+ena
+conf t
+
+ip route 0.0.0.0 0.0.0.0 12.13.10.1
+exit
+wr

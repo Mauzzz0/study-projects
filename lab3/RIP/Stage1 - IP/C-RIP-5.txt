@@ -1,0 +1,33 @@
+ena
+conf t
+
+hostname C-RIP-5
+
+int e0/0
+Description "to C-RIP-4"
+ip addr 213.234.12.2 255.255.255.252
+no shutdown
+
+int e0/1
+description "to C-RIP-7"
+ip addr 80.18.81.1 255.255.255.252
+no shutdown
+
+int e0/2
+description "to C-RIP-6"
+ip addr 100.120.86.1 255.255.255.252
+no shutdown
+
+int e0/3
+description "to M-RIP-2"
+ip addr 93.46.240.1 255.255.255.252
+no shutdown
+
+int e1/0
+description "to C-RIP-2"
+ip addr 93.46.249.2 255.255.255.252
+no shutdown
+
+exit
+exit
+write
