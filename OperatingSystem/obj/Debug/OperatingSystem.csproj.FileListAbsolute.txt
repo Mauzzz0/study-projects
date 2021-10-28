@@ -1,0 +1,7 @@
+C:\Users\rusla\source\repos\OperatingSystem\OperatingSystem\bin\Debug\OperatingSystem.exe.config
+C:\Users\rusla\source\repos\OperatingSystem\OperatingSystem\bin\Debug\OperatingSystem.exe
+C:\Users\rusla\source\repos\OperatingSystem\OperatingSystem\bin\Debug\OperatingSystem.pdb
+C:\Users\rusla\source\repos\OperatingSystem\OperatingSystem\obj\Debug\OperatingSystem.csprojAssemblyReference.cache
+C:\Users\rusla\source\repos\OperatingSystem\OperatingSystem\obj\Debug\OperatingSystem.csproj.CoreCompileInputs.cache
+C:\Users\rusla\source\repos\OperatingSystem\OperatingSystem\obj\Debug\OperatingSystem.exe
+C:\Users\rusla\source\repos\OperatingSystem\OperatingSystem\obj\Debug\OperatingSystem.pdb
